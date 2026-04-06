@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardik Pandya Contract Watch</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #001f5b, #0057b8);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      margin-top: 40px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      padding: 20px;
+      border-radius: 16px;
+      width: 120px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .box h2 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 800;
+    }
+
+    .box p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .cost {
+      margin-top: 40px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family: 'Orbitron', sans-serif;
+      color: #ffd700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.7);
+    }
+
+    .note {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    video {
+      margin-top: 40px;
+      width: 80%;
+      height: 420px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      object-fit: cover;
+    }
+
+    .logo {
+      width: 90px;
+      margin-top: 20px;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .logo { width: 70px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo { width: 60px; }
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+  
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .cost {
+        font-size: 2.2rem;
+      }
+
+      video {
+        width: 90%;
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+        padding: 0 10px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+
+      .countdown {
+        gap: 12px;
+      }
+
+      .box {
+        width: 100px;
+        padding: 15px;
+      }
+
+      .box h2 {
+        font-size: 1.6rem;
+      }
+
+      .cost {
+        font-size: 1.8rem;
+      }
+
+      video {
+        width: 95%;
+        height: 280px;
+      }
+
+      .note {
+        font-size: 0.95rem;
+        padding: 0 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+
+      .countdown {
+        gap: 10px;
+      }
+
+      .box {
+        width: 80px;
+        padding: 10px;
+      }
+
+      .box h2 {
+        font-size: 1.3rem;
+      }
+
+      .box p {
+        font-size: 0.7rem;
+      }
+
+      .cost {
+        font-size: 1.5rem;
+      }
+
+      video {
+        width: 100%;
+        height: 220px;
+      }
+
+      .footer {
+        font-size: 0.7rem;
+      }
+    }
+
+  
+
+    /* LOGO */
+    .logo {
+      width: 90px;
+      margin-top: 20px;
+      opacity: 0.95;
+    }
+
+    /* Background Watermark */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      background: url('image.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.05;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    /* RESPONSIVE LOGO */
+    @media (max-width: 768px) {
+      .logo {
+        width: 70px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 60px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <img src="image.png" class="logo">
+
+  <!-- MI Logo -->
+  <img src="image.png" class="logo">
+
+  <h1>HARDIK PANDYA CONTRACT WATCH</h1>
+  <div class="subtitle">A live countdown to Hardik Pandya's contract which gets terminated when we release him in Mega Auction 2028 alongside how much he is costing us each second</div>
+
+  <div class="countdown">
+    <div class="box"><h2 id="years">0</h2><p>Years</p></div>
+    <div class="box"><h2 id="months">0</h2><p>Months</p></div>
+    <div class="box"><h2 id="days">0</h2><p>Days</p></div>
+    <div class="box"><h2 id="hours">0</h2><p>Hours</p></div>
+    <div class="box"><h2 id="minutes">0</h2><p>Minutes</p></div>
+    <div class="box"><h2 id="seconds">0</h2><p>Seconds</p></div>
+  </div>
+
+  <div class="cost" id="cost">₹0</div>
+
+  <div class="note">
+    Hardik Pandya is enemy of Mumbai Indians and stands against every value we had as a club. He has ruined our dressing room and is Dhurandhar sent by CSK so mi doesn't win 6th before them . Here is video proof of him being csk agent
+  </div>
+
+  <video id="video" controls>
+    <source src="m2-res_240p.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="footer">Made with love from MI matchday fan @cityzen100623 💙</div>
+
+  <script>
+    const expiryDate = new Date("2028-12-31T23:59:59");
+    const startDate = new Date("2024-01-01T00:00:00");
+    const yearlySalary = 16.35 * 10000000;
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = expiryDate - now;
+
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const months = Math.floor((diff / (1000 * 60 * 60 * 24 * 30)) % 12);
+      const days = Math.floor((diff / (1000 * 60 * 60 * 24)) % 30);
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("years").innerText = years;
+      document.getElementById("months").innerText = months;
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      const elapsedYears = (now - startDate) / (1000 * 60 * 60 * 24 * 365);
+      const cost = yearlySalary * elapsedYears;
+
+      document.getElementById("cost").innerText = "₹" + Math.floor(cost).toLocaleString();
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    // Local video already linked above
+  </script>
+
+</body>
+</html>
