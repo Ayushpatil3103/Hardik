@@ -251,6 +251,91 @@
         width: 60px;
       }
     }
+    /* Petition Section */
+.petition-section {
+  margin: 50px auto;
+  padding: 30px 20px;
+  max-width: 900px;
+  text-align: center;
+}
+
+.petition-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+
+.petition-poster {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+.petition-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+}
+
+.petition-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #ffb700);
+  color: #001f5b;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(255,215,0,0.35);
+  transition: all 0.3s ease;
+}
+
+.petition-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255,215,0,0.45);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .petition-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .petition-text {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .petition-btn {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .petition-section {
+    padding: 20px 15px;
+  }
+
+  .petition-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .petition-text {
+    font-size: 0.9rem;
+  }
+
+  .petition-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
 
   </style>
 </head>
@@ -283,6 +368,21 @@
     <source src="m2-res_240p.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <!-- Petition Section -->
+<div class="petition-section">
+  <h2>Support the Petition</h2>
+  
+  <img src="poster.png" alt="Petition Poster" class="petition-poster">
+
+  <p class="petition-text">
+    If you believe Mumbai Indians deserve better leadership, support the fan movement by signing the petition.
+  </p>
+
+  <a href="https://c.org/nvzMWnSjpx" target="_blank" class="petition-btn">
+    Sign the Petition
+  </a>
+</div>
 
   <div class="footer">Made with love from MI matchday fan @cityzen100623 💙</div>
 
